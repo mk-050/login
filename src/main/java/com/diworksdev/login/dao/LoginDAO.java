@@ -4,8 +4,8 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 
-import com.diworksdev.login.DBConnector;
 import com.diworksdev.login.dto.LoginDTO;
+import com.diworksdev.login.util.DBConnector;
 
 public class LoginDAO {
 	public LoginDTO select(String name,String password) throws SQLException{
