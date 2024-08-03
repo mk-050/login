@@ -10,33 +10,35 @@ public class LoginAction extends ActionSupport {
 	private String name;
 	private String password;
 
-	public String execute() throws SQLException{
-		String ret=ERROR;
-		
-		LoginDAO dao=new LoginDAO();
-		LoginDTO dto=new LoginDTO();
-		
-		dto=dao.select(name,password);
-		if(name.equals(dto.getName())) {
-			if(password.equals(dto.getPassword())){
-				ret=SUCCESS;
+	public String execute() throws SQLException {
+		String ret = ERROR;
+
+		LoginDAO dao = new LoginDAO();
+		LoginDTO dto = new LoginDTO();
+
+		dto = dao.select(name, password);
+		if (name.equals(dto.getName())) {
+			if (password.equals(dto.getPassword())) {
+				ret = SUCCESS;
 			}
 		}
 		return ret;
 	}
-	
+
 	public String getName() {
 		return name;
 	}
+
 	public void setName(String name) {
-		this.name=name;
+		this.name = name;
 	}
+
 	public String getPassword() {
 		return password;
 	}
+
 	public void setpassword(String password) {
-		this.password=password;
+		this.password = password;
 	}
-	
 
 }
