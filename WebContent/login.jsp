@@ -10,7 +10,7 @@
 <body>
 	<s:form action="LoginAction">
 		<s:textfield name="name" />
-		<s:password name="passwword" />
+		<s:password name="password" />
 		<s:submit value="ログイン" />
 	</s:form>
 
