@@ -1,6 +1,6 @@
 set names utf8;
-set foreign_key_check=0;
-drop databases if exists logindb_mk;
+set foreign_key_checks=0;
+drop database if exists logindb_mk;
 create database logindb_mk;
 use logindb_mk;
 
